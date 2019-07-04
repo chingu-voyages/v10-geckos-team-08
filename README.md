@@ -10,10 +10,14 @@ Add-project-description-here | Voyage-10 | https://chingu.io/
 ### LOCAL INSTALATION
 
     To install this project on local machine,
-    `Git clone` the repo
-    `cdlightpod` to navigate to lightpod folder
-    run `npm install` script
-    run `npm start` after installation
+   
+ `Git clone` the repo
 
-    your baby should be up and running
-    `
+ `cd lightpod` to navigate to lightpod folder
+
+ run `npm install` script
+
+ run `npm start` after installation
+
+ your baby should be up and running
+
