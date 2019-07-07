@@ -2,12 +2,14 @@
   text-align: center;
 }
 
+button {
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
-
 
 @keyframes App-logo-spin {
   from {
@@ -20,21 +22,65 @@
 
 /* -------------------------------------------- NavBar ---------------------------- */
 
-.navbar-light{
+.navbar-light {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
-    .navbar-brand{
-      color: white !important;
-      border: 1px solid white;
-      padding: 3px;
-      border-radius: 3px;
-    }
+.navbar-brand {
+  color: white !important;
+  border: 1px solid white;
+  padding: 3px;
+  border-radius: 3px;
+}
 
-  .navbar-brand:hover{
-    cursor: pointer;
-  }  
+.navbar-brand:hover {
+  cursor: pointer;
+}
 
-  .login{
-    margin-right: 10px; 
-  }
+.login {
+  margin-right: 10px;
+}
+.login a,
+.login a:hover {
+  text-decoration: none;
+  color: #28a745;
+}
+
+.login a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar-brand a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-brand a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* ------------------------------------ Login ----------------------------- */
+
+.login-container {
+  width: 400px;
+  margin: auto;
+  margin-top: 200px;
+}
+
+.login-submit {
+  width: 100%;
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+.login-header {
+  float: left !important;
+  background-color: darkgrey;
+  width: 100%;
+  text-align: start !important;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
