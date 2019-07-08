@@ -2,26 +2,16 @@
   text-align: center;
 }
 
+button{
+  
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -31,3 +21,68 @@
     transform: rotate(360deg);
   }
 }
+
+/* -------------------------------------------- NavBar ---------------------------- */
+
+.navbar-light{
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+    .navbar-brand{
+      color: white !important;
+      border: 1px solid white;
+      padding: 3px;
+      border-radius: 3px;
+    }
+
+  .navbar-brand:hover{
+    cursor: pointer;
+  }  
+
+  .login{
+    margin-right: 10px; 
+  }
+  .login a, .login a:hover {
+    text-decoration: none;
+    color: #28a745; 
+  }
+
+  .login a:hover {
+    text-decoration: none;
+    color: #FFF; 
+  }
+  .navbar-brand  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .navbar-brand  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+  
+  /* ------------------------------------ Login ----------------------------- */
+
+  .login-container{
+    width: 400px;
+    margin: auto;
+    margin-top: 200px;
+  }
+
+  .login-submit{
+    width: 100%;
+    font-weight: bold !important;
+  font-size: 20px !important;
+  }
+
+  .login-header{
+    float: left !important;
+    background-color: darkgrey;
+    width: 100%;
+    text-align: start !important;
+    padding: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+  }
