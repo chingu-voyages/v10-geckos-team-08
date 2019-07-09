@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
+import './utils/app';
+import { app, auth } from './utils/app';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Home from './components/Home';
@@ -14,6 +16,16 @@ class App extends Component {
     this.state = {
         loginstatus : null
     }
+}
+
+componentDidMount(){
+  app.auth().onAuthStateChanged(user => {
+    if(user){
+      this.setState({loginstatus:user.email});
+    }else{
+      this.setState({loginstatus: null});
+    }
+  })
 }
 
 handleLoginCheck = loginstat => {

@@ -65,6 +65,10 @@
     color: white;
   }
 
+  .username{
+    margin-right: 10px;
+  }
+
   
   /* ------------------------------------ Login Component ----------------------------- */
 
