@@ -94,3 +94,30 @@
     font-weight: bold;
     font-size: 20px;
   }
+
+
+  /* -----------------------------------home podcast lists ----------------------------------- */
+
+  .col-md-4{
+    min-width: fit-content !important;
+  }
+
+  .col-md-4 div{
+    margin: 15px 15px;
+  }
+
+  .col-md-4 a{
+   text-decoration: none;
+   color: black;
+   align-items: center !important;
+  }
+
+  .col-md-4 a p{
+    text-align: center !important;
+   }
+
+   .col-md-4 a:hover{
+    text-decoration: none;
+    color: black;
+    align-items: center !important;
+   }
