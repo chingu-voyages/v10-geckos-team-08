@@ -7,12 +7,19 @@ class SinglePodcast extends Component {
         this.state = {
           error: null,
           isLoaded: false,
-          podcast: null
+          podcast: null,
+          image :""
         };
        
       }
 
       that= this;
+
+
+      handlelisten = event => {
+        event.preventDefault();
+        this.props.onplaybuttonclicked("true",event.target.id, this.that.state.image);
+      }
 
       componentDidMount(){
         console.log(this.that.props.podcast);
@@ -31,6 +38,8 @@ class SinglePodcast extends Component {
             this.setState({
                 isLoaded: true,
                 podcast: list,
+                image :list.image,
+                
               }
               )
         })
@@ -59,7 +68,7 @@ class SinglePodcast extends Component {
                                 <p className="epititle">{episode.title}</p>
                                 <p className="epidate">{new Date(episode.pub_date_ms).toString()}</p>
                                 <p className="epilength">{Math.round(episode.audio_length_sec/60)}min</p>
-                                <div className="listenbutton" id={episode.id} key={episode.id}>LISTEN</div>
+                                <div className="listenbutton" id={episode.audio} key={episode.image} onClick={this.handlelisten}>LISTEN</div>
                             </div>
                         ))}
                     </div>
