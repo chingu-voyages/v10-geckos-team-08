@@ -44,32 +44,6 @@ class Player extends Component {
         }
     }
 
-
-    // getEpisode = () =>{
-    //     console.log(this.that.props.id);
-    //     const option = {
-    //           method: 'GET',
-    //           headers: {
-    //               'X-ListenAPI-Key' : "6c0c13adaf0c44199d1ed792266488f9"
-    //           }
-    //     }
-    //   //   let header = new Headers();
-    //   //   header.append("X-ListenAPI-Key", "6c0c13adaf0c44199d1ed792266488f9");
-    //     fetch(`https://listen-api.listennotes.com/api/v2/podcasts/${this.that.props.id}?sort=recent_first`, option)
-    //     .then(res => res.json())
-    //     .then((episode) => {
-    //         console.log(`${episode.audio} and image ${episode.image}`);
-    //         this.setState({
-    //             isLoaded: true,
-    //             audiofile: episode.audio,
-    //             imagefile:episode.image
-    //           }
-    //           )
-    //     })
-    //     .catch(error => {
-    //     //   this.props.history.push('/');
-    //     });
-    // }
   
     render() { 
         return (  
