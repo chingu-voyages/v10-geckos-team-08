@@ -43,81 +43,196 @@
   color: #28a745;
 }
 
-  .login{
-    margin-right: 10px; 
-  }
-  .login a, .login a:hover {
-    text-decoration: none;
-    color: #28a745; 
-  }
+.login {
+  margin-right: 10px;
+}
+.login a,
+.login a:hover {
+  text-decoration: none;
+  color: #28a745;
+}
 
-  .login a:hover {
-    text-decoration: none;
-    color: #FFF; 
-  }
-  .navbar-brand  a {
-    text-decoration: none;
-    color: white;
-  }
+.login a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar-brand a {
+  text-decoration: none;
+  color: white;
+}
 
-  .navbar-brand  a:hover {
-    text-decoration: none;
-    color: white;
-  }
+.navbar-brand a:hover {
+  text-decoration: none;
+  color: white;
+}
 
-  .username{
-    margin-right: 10px;
-  }
+.username {
+  margin-right: 10px;
+}
 
-  
-  /* ------------------------------------ Login Component ----------------------------- */
+/* ------------------------------------ Login Component ----------------------------- */
 
-  .login-container{
-    width: 400px;
-    margin: auto;
-    margin-top: 200px;
-  }
+.login-container {
+  width: 400px;
+  margin: auto;
+  margin-top: 200px;
+}
 
-  .login-submit{
-    width: 100%;
-    font-weight: bold !important;
+.login-submit {
+  width: 100%;
+  font-weight: bold !important;
   font-size: 20px !important;
-  }
+}
 
-  .login-header{
-    float: left !important;
-    background-color: darkgrey;
-    width: 100%;
-    text-align: start !important;
-    padding: 10px;
-    color: #FFF;
-    font-weight: bold;
-    font-size: 20px;
-  }
+.login-header {
+  float: left !important;
+  background-color: darkgrey;
+  width: 100%;
+  text-align: start !important;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* -----------------------------------home podcast lists ----------------------------------- */
+
+.col-md-4 {
+  /* min-width: fit-content !important; */
+}
+
+.col-md-4 div {
+  margin: 15px 15px;
+}
+
+.col-md-4 a {
+  text-decoration: none;
+  color: black;
+  align-items: center !important;
+}
+
+.col-md-4 a p {
+  text-align: center !important;
+}
+
+.col-md-4 a:hover {
+  text-decoration: none;
+  color: black;
+  align-items: center !important;
+}
+
+/* -----------------------------------------Single Podcast Components ------------------------------- */
+
+.single-container {
+  display: flex;
+  /* text-align: center; */
+  margin: auto;
+  max-width: 1500px !important;
+  margin-top: 50px !important;
+}
+
+.left-side {
+  width: 300px;
+  height: fit-content;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin-right: 3px;
+}
+
+.left-side img {
+  width: 200px;
+  padding: 10px 10px;
+  height: 200px;
+  border-radius: 2px;
+}
+
+.podtitle {
+  font-size: 15px;
+  word-wrap: break-word;
+  color: #28a745;
+  font-weight: bolder;
+}
+
+.podpublisher {
+  font-size: 10px;
+  word-wrap: break-word;
+  color: black;
+  font-weight: bold;
+}
+
+.right-side {
+  /* width: 100%; */
+  height: fit-content;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.poddescription {
+  font-size: 20px;
+  word-wrap: break-word;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.podepisodes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 0.1px solid lightgreen;
+  align-items: center;
+}
+
+.epititle {
+  color: #28a745;
+  width: 250px;
+  text-align: center;
+}
+
+.epidate{
+  width: 250px;
+  text-align: center;
+}
+
+.listenbutton {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  border-radius: 3px;
+}
+
+.listenbutton:hover {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  border-radius: 3px;
+  cursor: pointer;
+}
 
 
-  /* -----------------------------------home podcast lists ----------------------------------- */
+/* ------------------------------------------footer player --------------------------------- */
 
-  .col-md-4{
-    min-width: fit-content !important;
-  }
+.player{
+  background: #C6E5D9;
+  border-bottom-style: solid;
+  border-bottom-color: #000;
+  color: #FFF;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex !important;
+  text-align: center !important;
+}
 
-  .col-md-4 div{
-    margin: 15px 15px;
-  }
+.audio-player{
+  width: 700px;
+  color: #000;
+}
 
-  .col-md-4 a{
-   text-decoration: none;
-   color: black;
-   align-items: center !important;
-  }
-
-  .col-md-4 a p{
-    text-align: center !important;
-   }
-
-   .col-md-4 a:hover{
-    text-decoration: none;
-    color: black;
-    align-items: center !important;
-   }
+.audio-image{
+  height: 100px;
+  width: 100px;
+}
