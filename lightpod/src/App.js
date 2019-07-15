@@ -7,6 +7,8 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Home from './components/Home';
 import Signup from './components/Signup';
+import SinglePodcast from './components/singlepodcast';
+import Player from './components/player';
 
 class App extends Component {
 
@@ -14,7 +16,11 @@ class App extends Component {
     super(props);
 
     this.state = {
-        loginstatus : null
+        loginstatus : null,
+        podcastID : "",
+        playershow : false,
+        episodeaudio : "",
+        episodeimage:"",
     }
 }
 
@@ -34,14 +40,28 @@ handleLoginCheck = loginstat => {
  
 }
 
+getPodcastID = podcast => {
+  console.log(`this is the podcast id ${podcast}`);
+  this.setState({podcastID:podcast});
+}
+
+showplayer = (check, audio, image,) => {
+  console.log(`this button has been clicked ${check} ${audio} ${image}`);
+  if(check == 'true'){
+    this.setState({playershow: true, episodeaudio:audio, episodeimage:image});
+  }
+}
+
   render() { 
     return (
       <BrowserRouter>
       <div className="App">
         <Navbar title="LightPod" logintitle="Login" signuptitle="Sign Up" loginstat={this.state.loginstatus}/>
-        <Route exact path="/" render={()=> <Home title="Podcast List"/>} />
+        <Route exact path="/" render={()=> <Home title="Podcast List" onpodcastselect={this.getPodcastID}/>} />
         <Route exact path="/login" render={()=> <Login title="Login" onsubmmit={this.handleLoginCheck}/>} />
         <Route exact path="/signup" render={()=> <Signup title="Sign Up"/>} />
+        <Route exact path="/podcastdetail" render={() => <SinglePodcast title="singlePodcast" podcast={this.state.podcastID} onplaybuttonclicked={this.showplayer}/>}/>
+        <Player title="player"  checkstate={this.state.playershow} audio={this.state.episodeaudio} image={this.state.episodeimage}/>
       </div>
       </BrowserRouter>
     );
