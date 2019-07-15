@@ -35,18 +35,15 @@ componentDidMount(){
 }
 
 handleLoginCheck = loginstat => {
-  console.log("handle login check called" + loginstat);
   this.setState({loginstatus : loginstat});
  
 }
 
 getPodcastID = podcast => {
-  console.log(`this is the podcast id ${podcast}`);
   this.setState({podcastID:podcast});
 }
 
 showplayer = (check, audio, image,) => {
-  console.log(`this button has been clicked ${check} ${audio} ${image}`);
   if(check == 'true'){
     this.setState({playershow: true, episodeaudio:audio, episodeimage:image});
   }

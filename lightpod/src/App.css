@@ -125,7 +125,6 @@
 
 .single-container {
   display: flex;
-  /* text-align: center; */
   margin: auto;
   max-width: 1500px !important;
   margin-top: 50px !important;

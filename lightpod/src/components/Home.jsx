@@ -19,8 +19,6 @@ class Home extends Component {
         "X-ListenAPI-Key": "6c0c13adaf0c44199d1ed792266488f9"
       }
     };
-    //   let header = new Headers();
-    //   header.append("X-ListenAPI-Key", "6c0c13adaf0c44199d1ed792266488f9");
     fetch(
       "https://listen-api.listennotes.com/api/v2/best_podcasts?page=1&safe_mode=1&sort_by_date=0&type=episode&offset=0&len_min=10&len_max=30",
       option
@@ -28,14 +26,12 @@ class Home extends Component {
       .then(res => res.json())
       .then(
         list => {
-          console.log(list);
           this.setState({
             isLoaded: true,
             podcasts: list.podcasts
           });
         },
         error => {
-          console.log(error);
           this.setState({
             isLoaded: true,
             error: error
@@ -50,10 +46,7 @@ class Home extends Component {
   }
 
   render() {
-    // return (
-    //     <div>{this.props.title}</div>
-    //  );
-
+    
     const { error, isLoaded, podcasts } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -61,13 +54,6 @@ class Home extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        // <ul>
-        //   {items.map(item => (
-        //     <li key={item.name}>
-        //       {item.name} {item.price}
-        //     </li>
-        //   ))}
-        // </ul>
         <React.Fragment>
           <div className="container contain-podcasts">
             <div className="row">

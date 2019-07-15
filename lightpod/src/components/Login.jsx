@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
-import Home from './Home';
-import { app, auth } from '../utils/app';
+import { withRouter } from 'react-router-dom';
+import { auth } from '../utils/app';
 
 
 class Login extends Component {
@@ -33,15 +32,12 @@ class Login extends Component {
     handleLogin = async event => {
         event.preventDefault();
         const { email, password } = this.state;
-        console.log(`the email is ${email} and the password is ${password}`)
         await auth.signInWithEmailAndPassword(email, password)
         .then(user => 
             {
-                console.log(user.user.email)
                 this.that.setState({useremail:user.user.email})
                
             }).catch(error => console.log(error.message))
-        console.log(this.that.state.useremail);
         this.props.onsubmmit(this.state.useremail);
         this.props.history.push('/'); // this handles the navigation to home component after login
     }
