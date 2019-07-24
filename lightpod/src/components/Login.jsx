@@ -35,10 +35,15 @@ class Login extends Component {
         await auth.signInWithEmailAndPassword(email, password)
         .then(user => 
             {
-                this.that.setState({useremail:user.user.email})
+                if (user === null){
+                  alert("User Details not found")
+                } else{
+                    this.that.setState({useremail:user.user.email})
+                    this.that.props.onsubmmit(this.state.useremail);
+                }
                
-            }).catch(error => console.log(error.message))
-        this.props.onsubmmit(this.state.useremail);
+                }).catch(error => console.log(error.message))
+       
         this.props.history.push('/'); // this handles the navigation to home component after login
     }
     
