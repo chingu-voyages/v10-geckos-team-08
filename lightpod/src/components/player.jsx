@@ -29,7 +29,6 @@ class Player extends Component {
                   src={this.props.audio}
                   onPlay={e => console.log("onPlay")}
                   onCanPlay={e => this.that.setState({isLoaded:true})}
-
                   // other props here
                 />
               </div>
