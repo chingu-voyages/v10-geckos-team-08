@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import './utils/app';
-import { app, auth } from './utils/app';
+import { app } from './utils/app';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Home from './components/Home';
@@ -35,18 +35,15 @@ componentDidMount(){
 }
 
 handleLoginCheck = loginstat => {
-  console.log("handle login check called" + loginstat);
   this.setState({loginstatus : loginstat});
  
 }
 
 getPodcastID = podcast => {
-  console.log(`this is the podcast id ${podcast}`);
   this.setState({podcastID:podcast});
 }
 
 showplayer = (check, audio, image,) => {
-  console.log(`this button has been clicked ${check} ${audio} ${image}`);
   if(check == 'true'){
     this.setState({playershow: true, episodeaudio:audio, episodeimage:image});
   }

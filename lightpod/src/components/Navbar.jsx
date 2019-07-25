@@ -15,6 +15,7 @@ class Navbar extends Component {
         } else {
             return(
                 <React.Fragment>
+                    <button className="btn btn-outline-success my-2 my-sm-0 login"><NavLink exact to="/">Logout</NavLink></button>
                     <h3 className="btn btn-outline-success my-2 my-sm-0 username">{this.props.loginstat}</h3>
                 </React.Fragment>
             )

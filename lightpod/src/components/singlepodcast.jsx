@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class SinglePodcast extends Component {
     constructor(props) {
@@ -34,7 +34,6 @@ class SinglePodcast extends Component {
         fetch(`https://listen-api.listennotes.com/api/v2/podcasts/${this.that.props.podcast}?sort=recent_first`, option)
         .then(res => res.json())
         .then((list) => {
-            console.log(list);
             this.setState({
                 isLoaded: true,
                 podcast: list,
@@ -48,7 +47,7 @@ class SinglePodcast extends Component {
         });
     }
     render() { 
-        const { error, isLoaded, podcast } = this.state;
+        const { isLoaded, podcast } = this.state;
          if (!isLoaded) {
           return <div>Loading...</div>;
         } else {
