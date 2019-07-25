@@ -55,14 +55,14 @@ showplayer = (check, audio, image,) => {
   render() { 
     return (
       <BrowserRouter>
-      <div className="App">
-        <Navbar title="LightPod" logintitle="Login" signuptitle="Sign Up" loginstat={this.state.loginstatus}/>
-        <Route exact path="/" render={()=> <Home title="Podcast List" onpodcastselect={this.getPodcastID}/>} />
-        <Route exact path="/login" render={()=> <Login title="Login" onsubmmit={this.handleLoginCheck}/>} />
-        <Route exact path="/signup" render={()=> <Signup title="Sign Up"/>} />
-        <Route exact path="/podcastdetail" render={() => <SinglePodcast title="singlePodcast" podcast={this.state.podcastID} onplaybuttonclicked={this.showplayer}/>}/>
-        <Player title="player"  checkstate={this.state.playershow} audio={this.state.episodeaudio} image={this.state.episodeimage}/>
-      </div>
+        <div className="App">
+          <Navbar title="LightPod" logintitle="Login" signuptitle="Sign Up" loginstat={this.state.loginstatus}/>
+          <Route exact path="/" render={()=> <Home title="Podcast List" onpodcastselect={this.getPodcastID}/>} />
+          <Route exact path="/login" render={()=> <Login title="Login" onsubmmit={this.handleLoginCheck}/>} />
+          <Route exact path="/signup" render={()=> <Signup title="Sign Up"/>} />
+          <Route exact path="/podcastdetail" render={() => <SinglePodcast title="singlePodcast" podcast={this.state.podcastID} onplaybuttonclicked={this.showplayer}/>}/>
+          <Player title="player"  checkstate={this.state.playershow} audio={this.state.episodeaudio} image={this.state.episodeimage}/>
+        </div>
       </BrowserRouter>
     );
   }

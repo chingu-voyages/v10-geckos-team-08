@@ -5,7 +5,7 @@ import { app, auth } from '../utils/app';
 
 
 class Login extends Component {
-  
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -19,14 +19,14 @@ class Login extends Component {
       }
    
       // this method handles chages in email field
-      handleChangeEmail = event => {
-          this.setState({email: event.target.value})
+    handleChangeEmail = event => {
+        this.setState({email: event.target.value})
         
       }
 
        // this method handles chages in password field
-      handleChangePassword = event => {
-          this.setState({password:event.target.value})
+    handleChangePassword = event => {
+        this.setState({password:event.target.value})
       }
 
       // this method handles login to firebase
@@ -65,7 +65,5 @@ class Login extends Component {
          );
     }
 }
-
-
  
 export default withRouter(Login);
