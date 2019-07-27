@@ -231,7 +231,7 @@
   width: 700px;
   color: #000;
   background-color: #FFF;
-  margin: auto;
+  margin: 10px;
   align-items: center;
   
 }
@@ -239,4 +239,9 @@
 .audio-image{
   height: 100px;
   width: 100px;
+}
+
+audio{
+  background-color: #28a745 !important;
+  height: 100 !important;
 }

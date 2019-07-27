@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 import { NavLink} from 'react-router-dom';
+import { auth } from '../utils/app';
 
 
 class Navbar extends Component {
+
+    constructor(props) {
+        super(props);
+    
+        this.that = this;
+        
+      }
+
+      handleLogout = () => {
+        auth.signOut()
+            .then(()=>{
+                alert("Successfully logged out")
+            })
+            .catch(error=> {
+                console.log(error.message)
+            })
+      }
 
     checkLogin = () => {
         if (this.props.loginstat == null){
@@ -15,7 +33,7 @@ class Navbar extends Component {
         } else {
             return(
                 <React.Fragment>
-                    <button className="btn btn-outline-success my-2 my-sm-0 login"><NavLink exact to="/">Logout</NavLink></button>
+                    <button className="btn btn-outline-success my-2 my-sm-0 login" onClick={this.handleLogout}><NavLink exact to="/">Logout</NavLink></button>
                     <h3 className="btn btn-outline-success my-2 my-sm-0 username">{this.props.loginstat}</h3>
                 </React.Fragment>
             )

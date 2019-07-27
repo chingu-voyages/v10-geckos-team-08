@@ -24,14 +24,9 @@ class Player extends Component {
             </div>
             <div className="footer-right">
               <div className="audio-player">
-                <AudioPlayer
-                  autoPlay
-                  src={this.props.audio}
-                  onPlay={e => console.log("onPlay")}
-                  onCanPlay={e => this.that.setState({isLoaded:true})}
-
-                  // other props here
-                />
+                <audio controls autoPlay>
+                  <source  src={this.props.audio}></source>
+                </audio>
               </div>
             </div>
           </footer>
