@@ -20,12 +20,12 @@ class Player extends Component {
         <React.Fragment>
           <footer className="footer player navbar fixed-bottom navbar-expand-sm">
             <div className="footer-left">
-              <img className="audio-image" src={this.props.image} />
+              <img className="audio-image" src={this.that.props.image} />
             </div>
             <div className="footer-right">
               <div className="audio-player">
                 <audio controls autoPlay>
-                  <source  src={this.props.audio}></source>
+                  <source  src={this.that.props.audio}></source>
                 </audio>
               </div>
             </div>
