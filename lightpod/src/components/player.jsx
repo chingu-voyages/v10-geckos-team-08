@@ -24,8 +24,7 @@ class Player extends Component {
             </div>
             <div className="footer-right">
               <div className="audio-player">
-                <audio controls autoPlay>
-                  <source  src={this.that.props.audio}></source>
+                <audio controls autoPlay src={this.that.props.audio}>
                 </audio>
               </div>
             </div>
