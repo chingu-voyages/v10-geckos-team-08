@@ -76,6 +76,7 @@
   width: 400px;
   margin: auto;
   margin-top: 200px;
+  margin-bottom: 200px !important;
 }
 
 .login-submit {
@@ -121,6 +122,10 @@
   align-items: center !important;
 }
 
+.contain-podcasts{
+  margin-bottom: 150px !important;
+}
+
 /* -----------------------------------------Single Podcast Components ------------------------------- */
 
 .single-container {
@@ -128,6 +133,7 @@
   margin: auto;
   max-width: 1500px !important;
   margin-top: 50px !important;
+  margin-bottom: 150px !important;
 }
 
 .left-side {
