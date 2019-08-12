@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { app, auth } from '../utils/app';
+import { withRouter } from "react-router-dom";
 
 class Signup extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class Signup extends Component {
     console.log(this.state);
     await auth.createUserWithEmailAndPassword(email, password)
       .catch(error => console.error(error.message))
+      this.props.history.push("/"); // this handles the navigation to home component after login
   }
 
   render() { 
@@ -55,4 +57,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default withRouter(Signup)
