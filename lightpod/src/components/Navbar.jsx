@@ -45,10 +45,8 @@ class Navbar extends Component {
         <nav className="navbar navbar-light justify-content-between">
                 <NavLink className="navbar-brand" exact to="/" href="#">{this.props.title}</NavLink>
                 <div className="form-inline">
-                         {this.checkLogin()}
-                        
+                         {this.checkLogin()} 
                 </div>
-               
         </nav>
         );
     }
